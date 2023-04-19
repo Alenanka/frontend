@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, td{
+        border: 1px solid black;
+    }
+    tr:nth-child(even)
+    {background : coral;
+    }
+    tr:nth-child(odd)
+    {background : crimson;
+    }
+a {
+    color:white;
+    text-decoration: none;
+}
+</style>
+<body>
+    <div id="box">
+<table>
+  <!-- <tr>
+    <td><a href=""> Link1</td>
+    <td>Ячейка 2</td>
+    <td>Ячейка 3</td>
+  </tr>
+  <tr>
+    <td>Ячейка 1</td>
+    <td>Ячейка 2</td>
+    <td>Ячейка 3</td>
+  </tr>
+  <tr>
+    <td>Ячейка 1</td>
+    <td>Ячейка 2</td>
+    <td>Ячейка 3</td>
+  </tr>
+ </table> -->
+    </div>
+</body>
+    
+ 
+ 
+
+  <script>
+    let row = prompt("Введите число строк");
+    let col = prompt("Введите число колонок");
+    let count = 1;
+    let myTable="";
+     for (i=1;i<=row;i++)
+      {
+        myTable += "<tr>";
+        for (j=1; j<=col;j++)
+        { myTable += `<td><a href="link1.html">Ячейка${count++}</a></td>`;
+        }
+        myTable += "</tr>";
+       }
+    myTable = ` <table>
+                  <tbody>
+                    ${myTable}
+                  </tbody>   
+                </table>
+              `;
+    box.innerHTML = myTable;
+    console.log(myTable);
+ </script>
+   
+</html>
